@@ -36,3 +36,34 @@
     transform: rotate(360deg);
   }
 }
+
+.TotalPanel {
+  background-color: rgb(3, 3, 133);
+  margin-top: 16px;
+  width: 250px;
+  border-radius: 25px;
+}
+
+.ButtonPanel {
+  display: flex;
+  align-items: center;
+}
+
+.Button {
+  background-color: #61dafb;
+  font-weight: 700;
+  font-size: larger;
+  border-radius: 25px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  width: 100px;
+  height: 100px;
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+.Count {
+  width: 80px;
+}
