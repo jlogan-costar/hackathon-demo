@@ -1,12 +1,9 @@
-Hey everyone, thanks for coming to my React Crash Course presentation!
-
-Here's the github repo with the demo code from the presentation. To run it, just run npm start (you'll need npm downloaded)
-
-I've left the default README from create react app below for your reference.
-
-Here's my LinkedIn, if you have any questions please reach out!
-- https://www.linkedin.com/in/justin-logan-893627228/ 
-
+# Hey everyone, thanks for coming to my React Crash Course presentation!
+- Here's the github repo with the demo code from the presentation. To run it, just run npm start (you'll need npm downloaded)
+- I've left the default README from create react app below for your reference.
+- Here's my LinkedIn, if you have any questions please reach out: https://www.linkedin.com/in/justin-logan-893627228/ 
+- And good luck at the hackathon!
+  
 
 //-------------Default README below--------------------------//
 
