@@ -1,4 +1,5 @@
 import CloseIcon from "@mui/icons-material/Close";
+import ArrowCircleRightIcon from "@mui/icons-material/ArrowCircleRight";
 
 export const DetailsModal = ({
   neighborhood,
@@ -16,13 +17,16 @@ export const DetailsModal = ({
     <div
       style={{
         position: "absolute",
-        height: "300px",
-        width: "800px",
+        height: "200px",
+        width: "700px",
         marginTop: "50px",
-        marginRight: "50px",
-        marginLeft: "50px",
+        marginRight: "100px",
+        marginLeft: "100px",
         backgroundColor: "#f7f4f3",
         borderRadius: "2%",
+        borderWidth: "1.2px",
+        borderColor: "#989898",
+        borderStyle: "solid",
       }}
     >
       <button
@@ -34,6 +38,10 @@ export const DetailsModal = ({
           width: "full",
           cursor: "pointer",
           display: "flex",
+          borderWidth: "1.2px",
+          borderColor: "#989898",
+          borderStyle: "solid",
+          borderRadius: "20%",
         }}
         onClick={() => {
           setModalContents(undefined);
@@ -43,12 +51,37 @@ export const DetailsModal = ({
       </button>
       <div
         style={{
-          color: "black",
-          fontWeight: "500",
-          textDecoration: "underline",
+          display: "flex",
+          widows: "full",
+          justifyContent: "center",
+          position: "relative",
         }}
       >
-        {fullStateName}
+        <div
+          style={{
+            color: "black",
+            fontWeight: "500",
+          }}
+        >
+          {neighborhood.stateAbv}
+        </div>
+        <ArrowCircleRightIcon
+          style={{
+            color: "black",
+            marginLeft: "24px",
+            marginRight: "24px",
+            height: "48px",
+            width: "38px",
+          }}
+        />
+        <div
+          style={{
+            color: "black",
+            fontWeight: "500",
+          }}
+        >
+          {fullStateName}
+        </div>
       </div>
     </div>
   );
