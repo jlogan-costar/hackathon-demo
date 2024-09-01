@@ -1,7 +1,14 @@
 import { useState } from "react";
 import { CountryFlag } from "./country-flag";
+import { getStatesListFakeAPI } from "./get-states-list";
 
-export const Neighborhood = ({ neighborhood, index, setModalContents }) => {
+export const Neighborhood = ({
+  neighborhood,
+  index,
+  setModalContents,
+  stateCollection,
+  setStateCollection,
+}) => {
   const shade = index % 2 === 0 ? "#dcd9d9" : "#e6e1e1";
   const { name, countryCode, stateAbv } = neighborhood;
   const [hover, setHover] = useState(false);
@@ -25,6 +32,15 @@ export const Neighborhood = ({ neighborhood, index, setModalContents }) => {
         setHover(false);
       }}
       onClick={() => {
+        if (
+          !stateCollection?.find((collection) => {
+            return collection.countryCode === countryCode;
+          })
+        ) {
+          const newStates = getStatesListFakeAPI(countryCode);
+          const newCollection = { countryCode, statesList: newStates };
+          setStateCollection(stateCollection.concat(newCollection));
+        }
         setModalContents(neighborhood);
       }}
     >

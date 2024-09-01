@@ -5,6 +5,8 @@ import { useState } from "react";
 
 export const NeighborhoodTable = () => {
   const [modalContents, setModalContents] = useState();
+  const [stateCollection, setStateCollection] = useState([]);
+
   return (
     <div
       style={{
@@ -20,6 +22,7 @@ export const NeighborhoodTable = () => {
         <DetailsModal
           neighborhood={modalContents}
           setModalContents={setModalContents}
+          stateCollection={stateCollection}
         />
       )}
       {NEIGHBORHOOD_LIST.map((neighborhood, i) => {
@@ -29,6 +32,8 @@ export const NeighborhoodTable = () => {
             key={i}
             index={i}
             setModalContents={setModalContents}
+            setStateCollection={setStateCollection}
+            stateCollection={stateCollection}
           />
         );
       })}

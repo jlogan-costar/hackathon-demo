@@ -1,6 +1,17 @@
 import CloseIcon from "@mui/icons-material/Close";
 
-export const DetailsModal = ({ neighborhood, setModalContents }) => {
+export const DetailsModal = ({
+  neighborhood,
+  setModalContents,
+  stateCollection,
+}) => {
+  const fullStateName = stateCollection
+    ?.find((collection) => {
+      return collection.countryCode === neighborhood.countryCode;
+    })
+    .statesList?.find((state) => {
+      return state.stateCode === neighborhood.stateAbv;
+    })?.stateName;
   return (
     <div
       style={{
@@ -30,7 +41,15 @@ export const DetailsModal = ({ neighborhood, setModalContents }) => {
       >
         <CloseIcon />
       </button>
-      <div style={{ color: "black" }}>{neighborhood.stateAbv}</div>
+      <div
+        style={{
+          color: "black",
+          fontWeight: "500",
+          textDecoration: "underline",
+        }}
+      >
+        {fullStateName}
+      </div>
     </div>
   );
 };
