@@ -2,10 +2,12 @@ import { NEIGHBORHOOD_LIST } from "./constants";
 import { DetailsModal } from "./details-modal";
 import { Neighborhood } from "./neighborhood";
 import { useState } from "react";
+import { Hourglass } from "react-loader-spinner";
 
 export const NeighborhoodTable = () => {
   const [modalContents, setModalContents] = useState();
   const [stateCollection, setStateCollection] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
 
   return (
     <div
@@ -18,6 +20,19 @@ export const NeighborhoodTable = () => {
         padding: "24px",
       }}
     >
+      {isLoading && (
+        <Hourglass
+          visible={true}
+          height="200"
+          width="200"
+          wrapperStyle={{
+            position: "absolute",
+            marginTop: "335px",
+            marginLeft: "-100px",
+          }}
+          colors={["#17315c", "#96afd6"]}
+        />
+      )}
       {!!modalContents && (
         <DetailsModal
           neighborhood={modalContents}
@@ -34,6 +49,7 @@ export const NeighborhoodTable = () => {
             setModalContents={setModalContents}
             setStateCollection={setStateCollection}
             stateCollection={stateCollection}
+            setIsLoading={setIsLoading}
           />
         );
       })}

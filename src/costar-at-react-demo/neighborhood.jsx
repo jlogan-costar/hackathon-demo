@@ -8,6 +8,7 @@ export const Neighborhood = ({
   setModalContents,
   stateCollection,
   setStateCollection,
+  setIsLoading,
 }) => {
   const shade = index % 2 === 0 ? "#dcd9d9" : "#e6e1e1";
   const { name, countryCode, stateAbv } = neighborhood;
@@ -31,17 +32,19 @@ export const Neighborhood = ({
       onMouseOut={() => {
         setHover(false);
       }}
-      onClick={() => {
+      onClick={async () => {
+        setIsLoading(true);
         if (
           !stateCollection?.find((collection) => {
             return collection.countryCode === countryCode;
           })
         ) {
-          const newStates = getStatesListFakeAPI(countryCode);
+          const newStates = await getStatesListFakeAPI(countryCode);
           const newCollection = { countryCode, statesList: newStates };
           setStateCollection(stateCollection.concat(newCollection));
         }
         setModalContents(neighborhood);
+        setIsLoading(false);
       }}
     >
       <span style={{ width: "33.33%", margin: "auto" }}>{name}</span>

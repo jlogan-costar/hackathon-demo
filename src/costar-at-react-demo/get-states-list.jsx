@@ -1,6 +1,11 @@
 import { CAN_LIST, GBR_LIST, MEX_LIST, USA_LIST } from "./constants";
 
-export const getStatesListFakeAPI = (countryCode) => {
+function delay(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+export const getStatesListFakeAPI = async (countryCode) => {
+  await delay(2000);
   if (countryCode === "USA") {
     return USA_LIST;
   } else if (countryCode === "MEX") {
