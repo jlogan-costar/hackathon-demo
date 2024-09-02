@@ -1,0 +1,68 @@
+.NeighborhoodTable {
+  position: relative;
+  height: 870px;
+  width: 900px;
+  background-color: #f7f4f3;
+  border-radius: 2%;
+  padding: 24px;
+}
+
+.Hourglass {
+  position: absolute;
+  margin-top: 335px;
+  margin-left: -100px;
+}
+
+.Neighborhood {
+  justify-content: space-between;
+  width: "full";
+  display: flex;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  color: #111111;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.NeighborhoodItem {
+  width: 33.3333%;
+  margin: auto;
+}
+
+.DetailsModal {
+  position: absolute;
+  height: 200px;
+  width: 700px;
+  margin-top: 50px;
+  margin-right: 100px;
+  margin-left: 100px;
+  background-color: #f7f4f3;
+  border-radius: 2%;
+  border-width: 1.2px;
+  border-color: #989898;
+  border-style: solid;
+}
+
+.CloseButton {
+  color: black;
+  margin-right: 12px;
+  margin-top: 12px;
+  margin-left: auto;
+  cursor: pointer;
+  display: flex;
+  border-width: 1.2px;
+  border-color: #989898;
+  border-style: solid;
+  border-radius: 20%;
+}
+
+.ModalContents {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.ModalText {
+  color: black;
+  font-weight: 500;
+}

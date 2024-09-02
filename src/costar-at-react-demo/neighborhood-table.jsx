@@ -10,26 +10,13 @@ export const NeighborhoodTable = () => {
   const [isLoading, setIsLoading] = useState(false);
 
   return (
-    <div
-      style={{
-        position: "relative",
-        height: "870px",
-        width: "900px",
-        backgroundColor: "#f7f4f3",
-        borderRadius: "2%",
-        padding: "24px",
-      }}
-    >
+    <div className="NeighborhoodTable">
       {isLoading && (
         <Hourglass
           visible={true}
           height="200"
           width="200"
-          wrapperStyle={{
-            position: "absolute",
-            marginTop: "335px",
-            marginLeft: "-100px",
-          }}
+          wrapperClass="Hourglass"
           colors={["#17315c", "#96afd6"]}
         />
       )}

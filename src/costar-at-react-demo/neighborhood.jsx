@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { CountryFlag } from "./country-flag";
 import { getStatesListFakeAPI } from "./get-states-list";
+import "./neighborhood.css";
 
 export const Neighborhood = ({
   neighborhood,
@@ -16,16 +17,9 @@ export const Neighborhood = ({
   return (
     <div
       style={{
-        justifyContent: "space-between",
-        width: "full",
-        display: "flex",
-        paddingTop: "4px",
-        paddingBottom: "4px",
-        color: "#111111",
         backgroundColor: hover ? "#aecde7" : shade,
-        fontWeight: "500",
-        cursor: "pointer",
       }}
+      className="Neighborhood"
       onMouseOver={() => {
         setHover(true);
       }}
@@ -47,11 +41,11 @@ export const Neighborhood = ({
         setIsLoading(false);
       }}
     >
-      <span style={{ width: "33.33%", margin: "auto" }}>{name}</span>
-      <span style={{ width: "33.33%", margin: "auto" }}>
+      <span className="NeighborhoodItem">{name}</span>
+      <span className="NeighborhoodItem">
         <CountryFlag countryCode={countryCode} />
       </span>
-      <span style={{ width: "33.33%", margin: "auto" }}>{stateAbv}</span>
+      <span className="NeighborhoodItem">{stateAbv}</span>
     </div>
   );
 };
