@@ -1,13 +1,15 @@
 import "./App.css";
-
-import { NeighborhoodTable } from "./costar-at-react-demo/neighborhood-table";
+import { NeighborhoodContainer } from "./costar-at-react-demo/neighborhood-container";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        {/* <ButtonContainer /> */}
-        <NeighborhoodTable />
+        {/** UVA Hackathon Demo */}
+        {/**  <ButtonContainer /> */}
+
+        {/** UVA Tech Night Demo */}
+        <NeighborhoodContainer />
       </header>
     </div>
   );

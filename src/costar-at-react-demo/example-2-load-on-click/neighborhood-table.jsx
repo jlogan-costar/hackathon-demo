@@ -1,12 +1,12 @@
-import { NEIGHBORHOOD_LIST } from "./constants";
-import { DetailsModal } from "./details-modal";
+import { NEIGHBORHOOD_LIST } from "../constants";
+import { DetailsModal } from "../details-modal";
 import { Neighborhood } from "./neighborhood";
 import { useState } from "react";
 import { Hourglass } from "react-loader-spinner";
 
 export const NeighborhoodTable = () => {
-  const [modalContents, setModalContents] = useState();
   const [stateCollection, setStateCollection] = useState([]);
+  const [modalContents, setModalContents] = useState();
   const [isLoading, setIsLoading] = useState(false);
 
   return (

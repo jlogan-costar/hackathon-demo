@@ -1,6 +1,6 @@
 import "./App.css";
 import { useState } from "react";
-import { SimpleButtonPanel } from "./simple-button-panel";
+import { SimpleButtonPanel } from "../simple-button-panel";
 import { ComplexButtonPanel } from "./complex-button-panel";
 
 //1.) Simple components

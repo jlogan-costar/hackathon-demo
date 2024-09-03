@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { CountryFlag } from "./country-flag";
-import { getStatesListFakeAPI } from "./get-states-list";
-import "./neighborhood.css";
+import { CountryFlag } from "../country-flag";
+import { getStatesListFakeAPI } from "../get-states-list";
+import "../neighborhood.css";
 
 export const Neighborhood = ({
   neighborhood,
