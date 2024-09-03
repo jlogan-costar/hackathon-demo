@@ -7,8 +7,6 @@ export const Neighborhood = ({
   neighborhood,
   index,
   setModalContents,
-  stateCollection,
-  setStateCollection,
   setIsLoading,
 }) => {
   const shade = index % 2 === 0 ? "#dcd9d9" : "#e6e1e1";
@@ -28,15 +26,6 @@ export const Neighborhood = ({
       }}
       onClick={async () => {
         setIsLoading(true);
-        if (
-          !stateCollection?.find((collection) => {
-            return collection.countryCode === countryCode;
-          })
-        ) {
-          const newStates = await getStatesListFakeAPI(countryCode);
-          const newCollection = { countryCode, statesList: newStates };
-          setStateCollection(stateCollection.concat(newCollection));
-        }
         setModalContents(neighborhood);
         setIsLoading(false);
       }}
