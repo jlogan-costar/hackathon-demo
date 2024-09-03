@@ -5,7 +5,9 @@ import { useState } from "react";
 import { Hourglass } from "react-loader-spinner";
 
 export const NeighborhoodTable = () => {
+  // state collection, initialized to an empty list
   const [stateCollection, setStateCollection] = useState([]);
+
   const [modalContents, setModalContents] = useState();
   const [isLoading, setIsLoading] = useState(false);
 

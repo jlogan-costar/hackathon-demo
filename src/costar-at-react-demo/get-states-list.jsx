@@ -2,6 +2,7 @@ import { CAN_LIST, GBR_LIST, MEX_LIST, USA_LIST } from "./constants";
 import { delay } from "./delay";
 
 export const getStatesListFakeAPI = async (countryCode) => {
+  // adds a 2 second delay to simulate a fake API call
   await delay(2000);
   if (countryCode === "USA") {
     return USA_LIST;

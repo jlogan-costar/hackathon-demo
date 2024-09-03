@@ -28,13 +28,16 @@ export const Neighborhood = ({
       }}
       onClick={async () => {
         setIsLoading(true);
+        // check if the specific countryCode's state list has already been fetched
         if (
           !stateCollection?.find((collection) => {
             return collection.countryCode === countryCode;
           })
         ) {
+          // if it hasn't, fetch it
           const newStates = await getStatesListFakeAPI(countryCode);
-          const newCollection = { countryCode, statesList: newStates };
+          const newCollection = { countryCode, statesList: newStates }; //data shaping
+          // then add it to our state collection so it won't be fetched again
           setStateCollection(stateCollection.concat(newCollection));
         }
         setModalContents(neighborhood);
