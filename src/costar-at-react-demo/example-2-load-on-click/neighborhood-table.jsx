@@ -5,7 +5,6 @@ import { useState } from "react";
 import { Hourglass } from "react-loader-spinner";
 
 export const NeighborhoodTable = () => {
-  const [stateCollection, setStateCollection] = useState([]);
   const [modalContents, setModalContents] = useState();
   const [isLoading, setIsLoading] = useState(false);
 
@@ -22,9 +21,8 @@ export const NeighborhoodTable = () => {
       )}
       {!!modalContents && (
         <DetailsModal
-          neighborhood={modalContents}
+          modalContents={modalContents}
           setModalContents={setModalContents}
-          stateCollection={stateCollection}
         />
       )}
       {NEIGHBORHOOD_LIST.map((neighborhood, i) => {
@@ -34,8 +32,6 @@ export const NeighborhoodTable = () => {
             key={i}
             index={i}
             setModalContents={setModalContents}
-            setStateCollection={setStateCollection}
-            stateCollection={stateCollection}
             setIsLoading={setIsLoading}
           />
         );

@@ -1,18 +1,7 @@
 import CloseIcon from "@mui/icons-material/Close";
 import ArrowCircleRightIcon from "@mui/icons-material/ArrowCircleRight";
 
-export const DetailsModal = ({
-  neighborhood,
-  setModalContents,
-  stateCollection,
-}) => {
-  const fullStateName = stateCollection
-    ?.find((collection) => {
-      return collection.countryCode === neighborhood.countryCode;
-    })
-    .statesList?.find((state) => {
-      return state.stateCode === neighborhood.stateAbv;
-    })?.stateName;
+export const DetailsModal = ({ modalContents, setModalContents }) => {
   return (
     <div className="DetailsModal">
       <button
@@ -24,7 +13,7 @@ export const DetailsModal = ({
         <CloseIcon />
       </button>
       <div className="ModalContents">
-        <div className="ModalText">{neighborhood.stateAbv}</div>
+        <div className="ModalText">{modalContents.stateAbv}</div>
         <ArrowCircleRightIcon
           style={{
             color: "black",
@@ -34,7 +23,7 @@ export const DetailsModal = ({
             width: "38px",
           }}
         />
-        <div className="ModalText">{fullStateName}</div>
+        <div className="ModalText">{modalContents.fullState}</div>
       </div>
     </div>
   );

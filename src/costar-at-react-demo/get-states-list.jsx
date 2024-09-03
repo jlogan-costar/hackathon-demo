@@ -1,8 +1,5 @@
 import { CAN_LIST, GBR_LIST, MEX_LIST, USA_LIST } from "./constants";
-
-function delay(ms) {
-  return new Promise((resolve) => setTimeout(resolve, ms));
-}
+import { delay } from "./delay";
 
 export const getStatesListFakeAPI = async (countryCode) => {
   await delay(2000);
