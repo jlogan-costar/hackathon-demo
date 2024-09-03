@@ -6,7 +6,7 @@ import {
   USA_LIST,
 } from "../constants";
 import { delay } from "../delay";
-import { DetailsModal } from "../details-modal";
+import { DetailsModal } from "./details-modal";
 
 import { Neighborhood } from "./neighborhood";
 import { useEffect, useState } from "react";

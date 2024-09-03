@@ -1,5 +1,5 @@
 import { NEIGHBORHOOD_LIST } from "../constants";
-import { DetailsModal } from "../details-modal";
+import { DetailsModal } from "./details-modal";
 import { Neighborhood } from "./neighborhood";
 import { useState } from "react";
 import { Hourglass } from "react-loader-spinner";
